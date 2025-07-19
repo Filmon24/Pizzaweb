@@ -5,20 +5,28 @@ import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import CartPage from "./pages/CartPage";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <CartProvider>
         <Navbar />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/menu" exact component={Menu} />
-          <Route path="/about" exact component={About} />
-          <Route path="/contact" exact component={Contact} />
-        </Switch>
+        
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/cart" element={<CartPage />} />
+        </Routes>
+        
         <Footer />
+        </CartProvider>
+
       </Router>
     </div>
   );

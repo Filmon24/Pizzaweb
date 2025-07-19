@@ -2,13 +2,14 @@
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
-.menu .menuTitle {
-  font-family: cursive;
-  font-size: 60px;
+
+.menuTitle {
+  font-size: 40px;
+  margin-bottom: 30px;
 }
 
 .menuList {
@@ -17,6 +18,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
+  gap: 20px;
 }
 
 /* MENU ITEM STYLING */
@@ -24,9 +26,15 @@
 .menuItem {
   border-radius: 15px;
   width: 300px;
-  height: 350px;
+  height: auto;
+  min-height: 450px;
   margin: 20px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 15px;
 }
 .menuItem:hover {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
@@ -44,9 +52,82 @@
   background-size: cover;
 }
 
-.menuItem h1,
-.menuItem p {
-  margin-left: 20px;
+.menuItem h1 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.priceTag {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.ingredients {
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.05);
+  padding-bottom: 10px;
+}
+
+.ingredients p {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px 0 8px;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ingredients ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.ingredients li {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  background-color: #e1f5fe;
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.ingredients li:hover {
+  background-color: #b3e5fc;
+  color: #000;
+}
+
+
+.orderButton {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px 0;
+  transition: background-color 0.3s ease;
+
+}
+
+.orderButton:hover {
+  background-color: #b3e5fc;
+  color: #000;
+
 }
 
 @media only screen and (max-width: 1300px) {

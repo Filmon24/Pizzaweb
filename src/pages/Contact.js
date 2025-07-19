@@ -6,10 +6,10 @@ function Contact() {
   return (
     <div className="contact">
       <div
-        className="leftSide"
+        className="contact-left"
         style={{ backgroundImage: `url(${PizzaLeft})` }}
       ></div>
-      <div className="rightSide">
+      <div className="contact-right">
         <h1> Contact Us</h1>
 
         <form id="contact-form" method="POST">

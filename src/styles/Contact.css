@@ -4,7 +4,7 @@
   display: flex;
 }
 
-.contact .leftSide {
+.contact .contact-left {
   height: 100%;
   flex: 50%;
   background-position: center;
@@ -12,12 +12,15 @@
   background-size: cover;
 }
 
-.contact .rightSide {
+.contact .contact-right {
   height: 100%;
   flex: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: white;
+  border-left: 2px solid #eee;
+  min-width: 320px;
 }
 
 .contact .rightSide h1 {
