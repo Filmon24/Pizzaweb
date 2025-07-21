@@ -8,6 +8,8 @@ import Contact from "./pages/Contact";
 import CartPage from "./pages/CartPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <Router>
         <CartProvider>
         <Navbar />
+        <ToastContainer position="top-right" autoClose={2000} hideProgressBar={false} newestOnTop closeOnClick pauseOnFocusLoss draggable pauseOnHover />
         
         <Routes>
           <Route path="/" element={<Home />} />

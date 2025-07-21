@@ -5,8 +5,10 @@ import "../styles/CartPage.css";
 function CartPage() {
   const { cartItems, removeFromCart } = useCart();
 
+  // DEBUG: Add a visible message
   return (
     <div className="cart-page">
+      <div style={{background: '#ffb347', color: '#fff', padding: '10px', fontWeight: 'bold', textAlign: 'center'}}>DEBUG: CartPage is rendering</div>
       <h1>Your Cart</h1>
       {cartItems.length === 0 ? (
         <p>Your cart is empty</p>
