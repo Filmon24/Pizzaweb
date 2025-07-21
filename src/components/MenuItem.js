@@ -46,13 +46,8 @@ function MenuItem({ image, name, price, ingredients = [] }) {
       </p>
 
       <div className="ingredients">
-        <p>Ingredients:</p>
         <ul>
-          {ingredients.map((ingredient, index) => (
-            <li key={index}>
-              <span className="ingredient-icon">{getIngredientIcon(ingredient)}</span> {ingredient}
-            </li>
-          ))}
+          <li>{ingredients.join(', ')}</li>
         </ul>
       </div>
 
